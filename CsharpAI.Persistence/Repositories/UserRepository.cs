@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CsharpAI.Persistence.Entities;
+using CsharpAI.Persistence.Interfaces;
 using Dapper;
 //using Microsoft.Extensions.Logging;
 
 namespace CsharpAI.Persistence.Repositories
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly DapperDBContext _context;
         //private readonly ILogger<UserRepository> _logger;
