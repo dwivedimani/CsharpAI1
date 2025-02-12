@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CsharpAI.Domain.Models;
 
 namespace CsharpAI.ResumeProcessor
 {
@@ -21,7 +22,7 @@ namespace CsharpAI.ResumeProcessor
             _hubContext = hubContext;
         }
 
-        public async Task<ResumeResult> ProcessResume(string filePath)
+        public async Task<Resume> ProcessResume(string filePath)
         {
             string extractedText = await _textExtractor.ExtractText(filePath);
             var analysisResult = await _aiAnalyzer.AnalyzeResume(extractedText);
