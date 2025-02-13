@@ -58,6 +58,7 @@ builder.WebHost.UseSentry(options =>
     options.Dsn = builder.Configuration["Sentry:Dsn"]; // Get DSN from appsettings.json
     options.Debug = true;  // Enable debugging logs
     options.TracesSampleRate = 1.0; // 100% transactions (adjust as needed)
+    options.Environment = builder.Configuration["Sentry:Environment"];
 });
 
 // Configure AI
@@ -90,7 +91,7 @@ app.UseSentryTracing();
 
 app.UseAuthorization();
 // Enable SignalR
-app.MapHub<AiHub>("/aiHub");
+app.MapHub<SignalHub>("/SignalHub");
 
 // Enable Hangfire Dashboard
 app.UseHangfireDashboard();

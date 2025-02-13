@@ -22,7 +22,7 @@ namespace CsharpAI.Application.Services
 
         public async Task<IEnumerable<JobDto>> GetJobsAsync()
         {
-            var jobs = await _repository.GetJobsAsync();
+            var jobs = await _repository.GetAllJobsAsync();
             return jobs.Select(j => new JobDto
             {
                 Title = j.Title,

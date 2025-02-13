@@ -14,6 +14,7 @@ namespace CsharpAI.Domain.Models
         public string Description { get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;
         public decimal Salary { get; set; }
+        public List<string> RequiredSkills { get; set; } = new();
         public JobType Type { get; set; }
     }
 }

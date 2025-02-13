@@ -9,7 +9,7 @@ namespace CsharpAI.Persistence.Interfaces
 {
     public interface IJobRepository
     {
-        Task<IEnumerable<Job>> GetJobsAsync();
+        Task<IEnumerable<Job>> GetAllJobsAsync();
         Task<Job?> GetJobByIdAsync(int id);
         Task AddJobAsync(Job job);
         Task UpdateJobAsync(Job job);

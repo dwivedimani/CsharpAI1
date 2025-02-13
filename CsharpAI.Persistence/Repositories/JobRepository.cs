@@ -17,7 +17,7 @@ namespace CsharpAI.Persistence.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Job>> GetJobsAsync() => null;
+        public async Task<IEnumerable<Job>> GetAllJobsAsync() => null;
 
         public async Task<Job?> GetJobByIdAsync(int id) => null;
 
